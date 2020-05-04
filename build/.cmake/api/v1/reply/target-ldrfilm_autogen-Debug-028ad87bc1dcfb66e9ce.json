@@ -1,0 +1,77 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/films/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "mitsuba-core::@9d97644c8f6463bf4b5c"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "mitsuba-render::@c7253971a9139727f5ae"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "mitsuba-hw::@cb876f8180e84ec1d9f6"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "plugins"
+	},
+	"id" : "ldrfilm_autogen::@5525cc5e1c90c340a204",
+	"isGeneratorProvided" : true,
+	"name" : "ldrfilm_autogen",
+	"paths" : 
+	{
+		"build" : "src/films",
+		"source" : "src/films"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/films/CMakeFiles/ldrfilm_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/films/CMakeFiles/ldrfilm_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

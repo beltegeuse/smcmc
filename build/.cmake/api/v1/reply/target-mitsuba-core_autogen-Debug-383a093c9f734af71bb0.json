@@ -1,0 +1,69 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/libcore/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "ior_database::@8f18171fb080bf8ecb90"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "microfacet_data::@de924995c689565fc075"
+		}
+	],
+	"id" : "mitsuba-core_autogen::@9d97644c8f6463bf4b5c",
+	"isGeneratorProvided" : true,
+	"name" : "mitsuba-core_autogen",
+	"paths" : 
+	{
+		"build" : "src/libcore",
+		"source" : "src/libcore"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/libcore/CMakeFiles/mitsuba-core_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/libcore/CMakeFiles/mitsuba-core_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

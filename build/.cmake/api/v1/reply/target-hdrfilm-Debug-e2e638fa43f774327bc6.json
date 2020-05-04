@@ -1,0 +1,427 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "binaries/plugins/hdrfilm.so"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_mts_plugin",
+			"add_film",
+			"install",
+			"target_link_libraries",
+			"add_mts_corelib",
+			"include_directories",
+			"include"
+		],
+		"files" : 
+		[
+			"data/cmake/MitsubaUtil.cmake",
+			"src/films/CMakeLists.txt",
+			"src/libcore/CMakeLists.txt",
+			"data/cmake/MitsubaExternal.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 312,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 349,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 322,
+				"parent" : 2
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 161,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 224,
+				"parent" : 7
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 84,
+				"parent" : 9
+			},
+			{
+				"file" : 3,
+				"parent" : 10
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 286,
+				"parent" : 11
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 290,
+				"parent" : 11
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 87,
+				"parent" : 9
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fvisibility=hidden -pipe -march=nocona -Wall -Winvalid-pch -mfpmath=sse  -std=gnu++11 -fopenmp -g -fPIC  "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "BOOST_ALL_NO_LIB"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "BOOST_FILESYSTEM_DYN_LINK"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "BOOST_SYSTEM_DYN_LINK"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "BOOST_THREAD_DYN_LINK"
+				},
+				{
+					"define" : "DOUBLE_PRECISION"
+				},
+				{
+					"define" : "MTS_DEBUG"
+				},
+				{
+					"define" : "MTS_HAS_FFTW=1"
+				},
+				{
+					"define" : "MTS_HAS_LIBJPEG=1"
+				},
+				{
+					"define" : "MTS_HAS_LIBPNG=1"
+				},
+				{
+					"define" : "MTS_HAS_OPENEXR=1"
+				},
+				{
+					"define" : "SPECTRUM_SAMPLES=3"
+				},
+				{
+					"define" : "hdrfilm_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "/home/agruson/projects/smcmc/smcmc/build/src/films/hdrfilm_autogen/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/usr/include/eigen3"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/usr/include/OpenEXR"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/agruson/projects/smcmc/smcmc/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "mitsuba-core::@9d97644c8f6463bf4b5c"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "mitsuba-render::@c7253971a9139727f5ae"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "mitsuba-hw::@cb876f8180e84ec1d9f6"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "hdrfilm_autogen::@5525cc5e1c90c340a204"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "plugins"
+	},
+	"id" : "hdrfilm::@5525cc5e1c90c340a204",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 4,
+				"path" : "plugins"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/agruson/projects/smcmc/smcmc/build/binaries:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../binaries/libmitsuba-hw.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../binaries/libmitsuba-render.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "../../binaries/libmitsuba-core.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpng",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpng",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ljpeg",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lHalf",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lIex",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lImath",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lIlmThread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lIlmImf",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/usr/lib64/libboost_filesystem.so.1.72.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/usr/lib64/libboost_system.so.1.72.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/usr/lib64/libboost_thread.so.1.72.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lfftw3",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lfftw3_threads",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lxerces-c",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lGL",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lGLU",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lGLEW",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lSM",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lICE",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lX11",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lXext",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lXxf86vm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "hdrfilm",
+	"nameOnDisk" : "hdrfilm.so",
+	"paths" : 
+	{
+		"build" : "src/films",
+		"source" : "src/films"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/films/hdrfilm_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/films/hdrfilm.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "src/films/annotations.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "src/films/banner.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "MODULE_LIBRARY"
+}

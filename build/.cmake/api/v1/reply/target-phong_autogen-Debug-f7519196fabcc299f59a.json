@@ -1,0 +1,77 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/bsdfs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "mitsuba-core::@9d97644c8f6463bf4b5c"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "mitsuba-render::@c7253971a9139727f5ae"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "mitsuba-hw::@cb876f8180e84ec1d9f6"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "plugins"
+	},
+	"id" : "phong_autogen::@2650a5b78772af2c3c8a",
+	"isGeneratorProvided" : true,
+	"name" : "phong_autogen",
+	"paths" : 
+	{
+		"build" : "src/bsdfs",
+		"source" : "src/bsdfs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/bsdfs/CMakeFiles/phong_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/bsdfs/CMakeFiles/phong_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

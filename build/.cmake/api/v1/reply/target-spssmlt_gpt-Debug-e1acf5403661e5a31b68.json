@@ -1,0 +1,383 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "binaries/plugins/spssmlt_gpt.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_mts_plugin",
+			"add_integrator",
+			"add_bidir",
+			"add_recons",
+			"install",
+			"target_link_libraries",
+			"add_mts_corelib",
+			"include_directories",
+			"include"
+		],
+		"files" : 
+		[
+			"data/cmake/MitsubaUtil.cmake",
+			"src/integrators/CMakeLists.txt",
+			"src/libcore/CMakeLists.txt",
+			"data/cmake/MitsubaExternal.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 11,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 312,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 349,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 322,
+				"parent" : 4
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 161,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 224,
+				"parent" : 9
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 84,
+				"parent" : 11
+			},
+			{
+				"file" : 3,
+				"parent" : 12
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 286,
+				"parent" : 13
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 290,
+				"parent" : 13
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 87,
+				"parent" : 11
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fvisibility=hidden -pipe -march=nocona -Wall -Winvalid-pch -mfpmath=sse  -std=gnu++11 -fopenmp -g -fPIC  "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_ALL_NO_LIB"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_FILESYSTEM_DYN_LINK"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_SYSTEM_DYN_LINK"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_THREAD_DYN_LINK"
+				},
+				{
+					"define" : "DOUBLE_PRECISION"
+				},
+				{
+					"define" : "MTS_DEBUG"
+				},
+				{
+					"define" : "MTS_HAS_FFTW=1"
+				},
+				{
+					"define" : "MTS_HAS_LIBJPEG=1"
+				},
+				{
+					"define" : "MTS_HAS_LIBPNG=1"
+				},
+				{
+					"define" : "MTS_HAS_OPENEXR=1"
+				},
+				{
+					"define" : "SPECTRUM_SAMPLES=3"
+				},
+				{
+					"define" : "spssmlt_gpt_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "/home/agruson/projects/smcmc/smcmc/build/src/integrators/spssmlt_gpt_autogen/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/usr/include/eigen3"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/usr/include/OpenEXR"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/agruson/projects/smcmc/smcmc/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 7,
+			"id" : "mitsuba-core::@9d97644c8f6463bf4b5c"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "mitsuba-render::@c7253971a9139727f5ae"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "mitsuba-bidir::@5ca42b889a6067c6213c"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "spssmlt_gpt_autogen::@cc645d70eca185fd34e2"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "plugins"
+	},
+	"id" : "spssmlt_gpt::@cc645d70eca185fd34e2",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 6,
+				"path" : "plugins"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/agruson/projects/smcmc/smcmc/build/binaries:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "../../binaries/libmitsuba-bidir.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "../../binaries/libmitsuba-render.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "../../binaries/libmitsuba-core.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpng",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpng",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ljpeg",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lHalf",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lIex",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lImath",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lIlmThread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lIlmImf",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/usr/lib64/libboost_filesystem.so.1.72.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/usr/lib64/libboost_system.so.1.72.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/usr/lib64/libboost_thread.so.1.72.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lfftw3",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lfftw3_threads",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lxerces-c",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "spssmlt_gpt",
+	"nameOnDisk" : "spssmlt_gpt.so",
+	"paths" : 
+	{
+		"build" : "src/integrators",
+		"source" : "src/integrators"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/integrators/spssmlt_gpt_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "MODULE_LIBRARY"
+}
