@@ -429,8 +429,8 @@ public:
 
 				// Initialize the tables used by the chi-square test
 				chiSqr->fill(
-					boost::bind(&BSDFAdapter::generateSample, &adapter),
-					boost::bind(&BSDFAdapter::pdf, &adapter, _1, _2)
+					std::bind(&BSDFAdapter::generateSample, &adapter),
+					std::bind(&BSDFAdapter::pdf, &adapter, std::placeholders::_1, std::placeholders::_2)
 				);
 
 				// (the following assumes that the distribution has 1 parameter, e.g. exponent value)
@@ -477,8 +477,8 @@ public:
 
 						// Initialize the tables used by the chi-square test
 						chiSqr->fill(
-							boost::bind(&BSDFAdapter::generateSample, &adapter),
-							boost::bind(&BSDFAdapter::pdf, &adapter, _1, _2)
+							std::bind(&BSDFAdapter::generateSample, &adapter),
+							std::bind(&BSDFAdapter::pdf, &adapter, std::placeholders::_1, std::placeholders::_2)
 						);
 
 						// (the following assumes that the distribution has 1 parameter, e.g. exponent value)
@@ -545,8 +545,8 @@ public:
 
 				// Initialize the tables used by the chi-square test
 				chiSqr->fill(
-					boost::bind(&PhaseFunctionAdapter::generateSample, &adapter),
-					boost::bind(&PhaseFunctionAdapter::pdf, &adapter, _1, _2)
+					std::bind(&PhaseFunctionAdapter::generateSample, &adapter),
+					std::bind(&PhaseFunctionAdapter::pdf, &adapter, std::placeholders::_1, std::placeholders::_2)
 				);
 
 				// (the following assumes that the distribution has 1 parameter, e.g. exponent value)
@@ -597,8 +597,8 @@ public:
 
 			// Initialize the tables used by the chi-square test
 			chiSqr->fill(
-				boost::bind(&EmitterAdapter::generateSample, &adapter),
-				boost::bind(&EmitterAdapter::pdf, &adapter, _1, _2)
+				std::bind(&EmitterAdapter::generateSample, &adapter),
+				std::bind(&EmitterAdapter::pdf, &adapter, std::placeholders::_1, std::placeholders::_2)
 			);
 			chiSqr->dumpTables("test.m");
 

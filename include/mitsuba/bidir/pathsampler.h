@@ -45,7 +45,7 @@ public:
 	 * of steps from the emitter, \c is the number of steps from the sensor,
 	 * and \c weight contains the importance weight associated with the sample.
 	 */
-	typedef boost::function<void (int, int, Float, Path &)> PathCallback;
+	typedef std::function<void (int, int, Float, Path &)> PathCallback;
 	typedef std::function<void (const Point2&, Spectrum)> PathCallbackPT;
 
 	/// Specifies the sampling algorithm that is internally used

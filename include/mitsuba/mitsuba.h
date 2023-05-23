@@ -20,6 +20,8 @@
 #if !defined(__MITSUBA_MITSUBA_H_)
 #define __MITSUBA_MITSUBA_H_
 
+#define BOOST_BIND_NO_PLACEHOLDERS
+
 #include <mitsuba/core/platform.h>
 #include <boost/version.hpp>
 #include <sstream>

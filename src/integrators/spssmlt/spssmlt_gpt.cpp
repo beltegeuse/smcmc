@@ -22,6 +22,7 @@
 #include <mitsuba/core/plugin.h>
 #include <mitsuba/core/fstream.h>
 #include <mitsuba/core/statistics.h>
+#include <fstream>  
 
 #include "spssmlt.h"
 #include "tile.h"

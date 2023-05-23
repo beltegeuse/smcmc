@@ -134,7 +134,7 @@ Float VonMisesFisherDistr::forMeanCosine(Float g) {
 
 	BrentSolver brentSolver(100, 1e-6f);
 	BrentSolver::Result result = brentSolver.solve(
-		boost::bind(&meanCosineFunctor, _1, g), 0, 1000);
+		std::bind(&meanCosineFunctor, std::placeholders::_1, g), 0, 1000);
 	SAssert(result.success);
 	return result.x;
 }

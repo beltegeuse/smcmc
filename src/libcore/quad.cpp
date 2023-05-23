@@ -1412,8 +1412,8 @@ NDIntegrator::EResult NDIntegrator::integrate(const Integrand &f, const Float *m
 		const Float *max, Float *result, Float *error, size_t *_evals) const {
 	VectorizationAdapter adapter(f, m_fdim, m_dim);
 	size_t evals = 0;
-	EResult retval = mitsuba::integrate((unsigned int) m_fdim, boost::bind(
-		&VectorizationAdapter::f, &adapter, _1, _2, _3), (unsigned int) m_dim,
+	EResult retval = mitsuba::integrate((unsigned int) m_fdim, std::bind(
+		&VectorizationAdapter::f, &adapter, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3), (unsigned int) m_dim,
 		min, max, m_maxEvals, m_absError, m_relError, result, error, evals, false);
 	if (_evals)
 		*_evals = evals;

@@ -141,8 +141,8 @@ public:
 	 * on how to invoke this function
 	 */
 	void fill(
-		const boost::function<boost::tuple<Vector, Float, EMeasure>()> &sampleFn,
-		const boost::function<Float (const Vector &, EMeasure)> &pdfFn);
+		const std::function<boost::tuple<Vector, Float, EMeasure>()> &sampleFn,
+		const std::function<Float (const Vector &, EMeasure)> &pdfFn);
 
 	/**
 	 * \brief Dump the bin counts to a file using MATLAB format

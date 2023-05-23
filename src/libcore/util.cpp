@@ -874,7 +874,7 @@ Float fresnelDiffuseReflectance(Float eta, bool fast) {
 	} else {
 		GaussLobattoIntegrator quad(1024, 0, 1e-5f);
 		return quad.integrate(
-			boost::bind(&fresnelDiffuseIntegrand, eta, _1), 0, 1);
+			std::bind(&fresnelDiffuseIntegrand, eta, std::placeholders::_1), 0, 1);
 	}
 
 	return 0.0f;

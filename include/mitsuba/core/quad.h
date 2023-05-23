@@ -222,8 +222,8 @@ protected:
  */
 class MTS_EXPORT_CORE NDIntegrator {
 public:
-	typedef boost::function<void (const Float *, Float *)>         Integrand;
-	typedef boost::function<void (size_t, const Float *, Float *)> VectorizedIntegrand;
+	typedef std::function<void (const Float *, Float *)>         Integrand;
+	typedef std::function<void (size_t, const Float *, Float *)> VectorizedIntegrand;
 
 	enum EResult {
 		ESuccess = 0,

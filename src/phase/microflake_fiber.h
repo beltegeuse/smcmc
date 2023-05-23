@@ -259,8 +259,8 @@ public:
 	Vector sample(const Point2 &sample) const {
 		BrentSolver brentSolver(100, 1e-6f);
 		BrentSolver::Result result = brentSolver.solve(
-			boost::bind(&GaussianFiberDistribution::cdfFunctor,
-				this, sample.x, _1), -1, 1);
+			std::bind(&GaussianFiberDistribution::cdfFunctor,
+				this, sample.x, std::placeholders::_1), -1, 1);
 		SAssert(result.success);
 
 		#if defined(MICROFLAKE_STATISTICS)

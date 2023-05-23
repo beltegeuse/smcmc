@@ -658,9 +658,9 @@ Float PathSampler::generateSeedsPSSMLT(size_t& sampleCount, size_t seedCount,
 
 	SplatList splatList;
 	Float luminance;
-	PathCallback callback = boost::bind(&seedCallback,
-										boost::ref(tempSeeds), importanceMap, boost::ref(luminance),
-										_1, _2, _3, _4);
+	PathCallback callback = std::bind(&seedCallback,
+										std::ref(tempSeeds), importanceMap, std::ref(luminance),
+										std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4);
 
 	// Counting to know
 	// how many initial sampled path
@@ -759,9 +759,9 @@ Float PathSampler::generateSeeds(size_t sampleCount, size_t seedCount,
 
 	SplatList splatList;
 	Float luminance;
-	PathCallback callback = boost::bind(&seedCallback,
-		boost::ref(tempSeeds), importanceMap, boost::ref(luminance),
-		_1, _2, _3, _4);
+	PathCallback callback = std::bind(&seedCallback,
+		std::ref(tempSeeds), importanceMap, std::ref(luminance),
+		std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4);
 
 	Float mean = 0.0f, variance = 0.0f;
 	for (size_t i=0; i<sampleCount; ++i) {
@@ -851,9 +851,9 @@ void PathSampler::reconstructPath(const PathSeed &seed, const Bitmap *importance
 	   number stream at the appropriate position. */
 	rplSampler->setSampleIndex(seed.sampleIndex);
 
-	PathCallback callback = boost::bind(&reconstructCallback,
-		boost::cref(seed), importanceMap,
-		boost::ref(result), boost::ref(m_pool), _1, _2, _3, _4);
+	PathCallback callback = std::bind(&reconstructCallback,
+		std::cref(seed), importanceMap,
+		std::ref(result), std::ref(m_pool), std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4);
 
 	samplePaths(Point2i(-1), callback);
 

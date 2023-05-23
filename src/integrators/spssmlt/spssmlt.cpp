@@ -20,6 +20,7 @@
 #include <mitsuba/core/plugin.h>
 #include <mitsuba/core/fstream.h>
 #include <mitsuba/core/statistics.h>
+#include <fstream>  
 
 #include "spssmlt.h"
 #include "tile.h"
@@ -116,7 +117,7 @@ public:
       // Creation of timer file
       std::string timeFilename = scene->getDestinationFile().string()
                                  + "_time.csv";
-      std::ofstream timeFile(timeFilename.c_str());
+      std::ofstream timeFile(timeFilename.c_str(), std::ofstream::out);
       ref<Timer> renderingTimer = new Timer;
 
       // Information about the rendering size

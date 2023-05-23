@@ -20,7 +20,6 @@
 #include <mitsuba/core/quad.h>
 #include <mitsuba/core/timer.h>
 #include <boost/math/distributions/chi_squared.hpp>
-#include <boost/bind.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <set>
 
@@ -88,8 +87,8 @@ void ChiSquare::dumpTables(const fs::path &filename) {
 }
 
 void ChiSquare::fill(
-	const boost::function<boost::tuple<Vector, Float, EMeasure>()> &sampleFn,
-	const boost::function<Float (const Vector &, EMeasure measure)> &pdfFn) {
+	const std::function<boost::tuple<Vector, Float, EMeasure>()> &sampleFn,
+	const std::function<Float (const Vector &, EMeasure measure)> &pdfFn) {
 	memset(m_table, 0, m_thetaBins*m_phiBins*sizeof(Float));
 	memset(m_refTable, 0, m_thetaBins*m_phiBins*sizeof(Float));
 
@@ -150,7 +149,7 @@ void ChiSquare::fill(
 			Float result, error;
 
 			integrator.integrateVectorized(
-				boost::bind(&ChiSquare::integrand, pdfFn, _1, _2, _3),
+				std::bind(&ChiSquare::integrand, pdfFn,std::placeholders:: _1, std::placeholders::_2, std::placeholders::_3),
 				min, max, &result, &error
 			);
 

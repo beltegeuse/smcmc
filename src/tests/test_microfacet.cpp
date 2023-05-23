@@ -111,8 +111,8 @@ public:
 			// Initialize the tables used by the chi-square test
 			MicrofacetAdapter adapter(sampler, distrs[i]);
 			chiSqr->fill(
-				boost::bind(&MicrofacetAdapter::generateSample, &adapter),
-				boost::bind(&MicrofacetAdapter::pdf, &adapter, _1, _2)
+				std::bind(&MicrofacetAdapter::generateSample, &adapter),
+				std::bind(&MicrofacetAdapter::pdf, &adapter, std::placeholders::_1, std::placeholders::_2)
 			);
 
 			// (the following assumes that the distribution has 1 parameter, e.g. exponent value)
@@ -152,8 +152,8 @@ public:
 			// Initialize the tables used by the chi-square test
 			MicrofacetAdapter adapter(sampler, distrs[i].first, distrs[i].second);
 			chiSqr->fill(
-				boost::bind(&MicrofacetAdapter::generateSample, &adapter),
-				boost::bind(&MicrofacetAdapter::pdf, &adapter, _1, _2)
+				std::bind(&MicrofacetAdapter::generateSample, &adapter),
+				std::bind(&MicrofacetAdapter::pdf, &adapter, std::placeholders::_1, std::placeholders::_2)
 			);
 
 			// (the following assumes that the distribution has 1 parameter, e.g. exponent value)

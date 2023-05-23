@@ -124,18 +124,18 @@ add_bidir(erptpss
         erptpss/erptpss_sampler.h
         erptpss/erptpss_sampler.cpp)
 
-add_recons(gpt
-        gpt/gpt.cpp
-        gpt/gpt_wr.cpp
-        gpt/gpt_proc.cpp
+# add_recons(gpt
+#         gpt/gpt.cpp
+#         gpt/gpt_wr.cpp
+#         gpt/gpt_proc.cpp
 
-        poisson_solver/Solver.cpp
-        poisson_solver/Backend.cpp
-        ${RECONSFILE}
-        poisson_solver/Defs.cpp
+#         poisson_solver/Solver.cpp
+#         poisson_solver/Backend.cpp
+#         ${RECONSFILE}
+#         poisson_solver/Defs.cpp
 
-        denoiser/nfor/Regression.cpp
-        denoiser/nfor/nfor.cpp
-        denoiser/nfor/core/Logging.cpp
-        denoiser/nfor/core/thread/ThreadPool.cpp
-        denoiser/nfor/core/thread/ThreadUtils.cpp)
+#         denoiser/nfor/Regression.cpp
+#         denoiser/nfor/nfor.cpp
+#         denoiser/nfor/core/Logging.cpp
+#         denoiser/nfor/core/thread/ThreadPool.cpp
+#         denoiser/nfor/core/thread/ThreadUtils.cpp)
